@@ -1,3 +1,4 @@
+import Clarice from '../Clarice';
 import './App.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
             <p>I like hiking.</p>
             <p>Because I love nature and outdoor activities.</p>
         </div>
+        <Clarice />
       </header>
     </div>
   );
