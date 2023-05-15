@@ -4,10 +4,11 @@ import { useLocation } from 'react-router-dom'
 
 function QuizPage() {
   const location = useLocation()
-  const { difficulty } = location.state
+  const { difficulty, category } = location.state
+
   return (
     <div>
-        <Questions difficulty={difficulty}/>
+        <Questions difficulty={difficulty} category={category}/>
     </div>
   )
 }

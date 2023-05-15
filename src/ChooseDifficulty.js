@@ -13,7 +13,7 @@ function ChooseDifficulty() {
                 <Link to='quiz' state={{ difficulty: 'medium' }}>Medium</Link>
             </button>
             <button>
-                <Link to='quiz' state={{ difficulty: 'advanced' }}>Avanced</Link>
+                <Link to='quiz' state={{ difficulty: 'hard' }}>Advanced</Link>
             </button>             
                
         </div>

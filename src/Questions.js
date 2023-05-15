@@ -9,9 +9,9 @@ Added part which is show us all questions and answers. Specially for this I used
 Please install lodash if don't have it yet.
 And I've created a Buttons folder where we can keep all button elements.*/}
 
-const Questions = () => {
+const Questions = ({difficulty, category}) => {
 
-    const TRIVIA_API = 'https://opentdb.com/api.php?amount=10';
+    const TRIVIA_API = `https://opentdb.com/api.php?amount=10&difficulty=${difficulty}`;
     const [quizData, setQuizData] = useState(null);
    
     useEffect(() => {

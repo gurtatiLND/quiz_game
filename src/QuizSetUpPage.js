@@ -9,6 +9,9 @@ function QuizSetUpPage() {
         <h3>Hello, {name}!</h3>
         <p>What category would you like to improve on?</p>
         <button>
+            <Link to='difficulty' state={{ category: 'general' }}>General</Link>
+        </button>
+        <button>
             <Link to='difficulty'>Surprise</Link>
         </button>
     </div>
