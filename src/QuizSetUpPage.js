@@ -9,7 +9,7 @@ function QuizSetUpPage() {
         <h3>Hello, {name}!</h3>
         <p>What category would you like to improve on?</p>
         <button>
-            <Link to='quiz'>Surprise</Link>
+            <Link to='difficulty'>Surprise</Link>
         </button>
     </div>
   )
