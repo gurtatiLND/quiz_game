@@ -13,9 +13,9 @@ const Routing = () => {
     <Router>
       <Routes>
       <Route path='/' index element={<App />} />
-      <Route path='/start' element={<ChooseCategory />} />
-      <Route path='start/difficulty' element={<ChooseDifficulty />} />
-      <Route path='start/difficulty/quiz' element={<QuizPage />} />
+      <Route path='/category' element={<ChooseCategory />} />
+      <Route path='category/difficulty' element={<ChooseDifficulty />} />
+      <Route path='category/difficulty/quiz' element={<QuizPage />} />
     </Routes>
     </Router>
   )

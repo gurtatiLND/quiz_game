@@ -19,7 +19,7 @@ function StartPage() {
       {console.log(name)}
 
       <button>
-        <Link to='start' state={{ name: name }}>Start</Link>
+        <Link to='category' state={{ name: name }}>Start</Link>
       </button>
 
 
