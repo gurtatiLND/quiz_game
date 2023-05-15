@@ -11,7 +11,7 @@ And I've created a Buttons folder where we can keep all button elements.*/}
 
 const Questions = ({difficulty, category}) => {
 
-    const TRIVIA_API = `https://opentdb.com/api.php?amount=10&difficulty=${difficulty}`;
+    const TRIVIA_API = `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}`;
     const [quizData, setQuizData] = useState(null);
    
     useEffect(() => {
@@ -26,6 +26,7 @@ const Questions = ({difficulty, category}) => {
 
     return (
         <div className='questions'>
+        {console.log(TRIVIA_API)}
             {quizData != null
                ? quizData.results.map((question, index) => {
                 return <div key={index}>

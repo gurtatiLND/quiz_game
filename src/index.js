@@ -5,16 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import QuizPage from './QuizPage';
-import QuizSetUpPage from './QuizSetUpPage';
 import ChooseDifficulty from './ChooseDifficulty';
+import ChooseCategory from './ChooseCategory';
 
 const Routing = () => {
   return (
     <Router>
       <Routes>
       <Route path='/' index element={<App />} />
-      <Route path='/start' element={<QuizSetUpPage />} />
-      <Route path='/start/difficulty' element={<ChooseDifficulty />} />
+      <Route path='/start' element={<ChooseCategory />} />
+      <Route path='start/difficulty' element={<ChooseDifficulty />} />
       <Route path='start/difficulty/quiz' element={<QuizPage />} />
     </Routes>
     </Router>
