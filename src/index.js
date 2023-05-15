@@ -5,13 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import QuizPage from './QuizPage';
+import QuizSetUpPage from './QuizSetUpPage';
 
 const Routing = () => {
   return (
     <Router>
       <Routes>
       <Route path='/' index element={<App />} />
-      <Route path='/quiz' element={<QuizPage />} />
+      <Route path='/start' element={<QuizSetUpPage />} />
+      <Route path='start/quiz' element={<QuizPage />} />
     </Routes>
     </Router>
   )
