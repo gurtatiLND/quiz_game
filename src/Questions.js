@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import _ from 'lodash';
 
+// eslint-disable-next-line no-lone-blocks
 {/* Now everything about "questions" is here. 
 I used useEffect like we did in last call. 
 Added part which is show us all questions and answers. Specially for this I used a LODASH library.

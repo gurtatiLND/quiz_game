@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import QuizPage from './QuizPage';
+
+const Routing = () => {
+  return (
+    <Router>
+      <Routes>
+      <Route path='/' index element={<App />} />
+      <Route path='/quiz' element={<QuizPage />} />
+    </Routes>
+    </Router>
+  )
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Routing />
   </React.StrictMode>
 );
 

@@ -1,12 +1,12 @@
 import './App.css';
-import Questions from './Questions';
+import StartPage from './StartPage';
 
 function App() {
   
   return (
     <div className="App">
       <div className='Content'>
-        <Questions />
+        <StartPage />
       </div>
     </div>
   );
