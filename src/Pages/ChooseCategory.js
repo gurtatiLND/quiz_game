@@ -28,9 +28,6 @@ function ChooseCategory() {
         <button>
             <Link to='difficulty' state={{ category: categories['music'] }}>Music</Link>
         </button>
-        <button>
-            <Link to='difficulty' state={{ category: categories['televison'] }}>Television</Link>
-        </button>
     </div>
     </>
   )

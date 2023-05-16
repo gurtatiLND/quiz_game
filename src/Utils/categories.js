@@ -3,6 +3,5 @@ export const categories = {
     "computer-science": 18,
     "books": 10,
     "films": 11,
-    "music": 12,
-    "television": 14
+    "music": 12
 }
