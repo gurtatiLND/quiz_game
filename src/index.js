@@ -4,9 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import QuizPage from './QuizPage';
-import ChooseDifficulty from './ChooseDifficulty';
-import ChooseCategory from './ChooseCategory';
+import QuizPage from './Pages/QuizPage';
+import ChooseDifficulty from './Pages/ChooseDifficulty';
+import ChooseCategory from './Pages/ChooseCategory';
 
 const Routing = () => {
   return (

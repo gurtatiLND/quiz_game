@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import {categories} from "./categories"
+import {categories} from "../Utils/categories"
 
 function ChooseCategory() {
     const location = useLocation()
