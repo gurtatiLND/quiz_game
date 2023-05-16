@@ -2,47 +2,49 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import _ from 'lodash';
 
-// eslint-disable-next-line no-lone-blocks
-{/* Now everything about "questions" is here. 
-I used useEffect like we did in last call. 
-Added part which is show us all questions and answers. Specially for this I used a LODASH library.
-Please install lodash if don't have it yet.
-And I've created a Buttons folder where we can keep all button elements.*/}
-
 const Questions = ({difficulty, category}) => {
 
-    const TRIVIA_API = `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}`;
+    const TRIVIA_API_URL = `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}`;
     const [quizData, setQuizData] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+    const handleFetchData = async () => {
+        await fetch(TRIVIA_API_URL)
+            .then(response => response.json())
+            .then(data => setQuizData(data))
+    }
    
     useEffect(() => {
-        fetch(TRIVIA_API)
-            .then(res => {
-               return res.json();
-            })
-            .then(data => {
-               setQuizData(data);
-            })
+        handleFetchData()
     }, []);
+
+    const handleChoiceClick = () => {
+        // to do: implement add point if choice is correct
+
+        const nextIndex = currentIndex + 1
+        nextIndex < quizData.results.length ? setCurrentIndex(nextIndex) : console.log("end")
+    }
 
     return (
         <div className='questions'>
-        {console.log(TRIVIA_API)}
-            {quizData != null
-               ? quizData.results.map((question, index) => {
-                return <div key={index}>
-                      <div className='Question'>{index + 1}. {question.question}</div>
-                      <select id="answers">
-                        {_.shuffle([
-                           question.correct_answer,
-                            ...question.incorrect_answers,
-                        ]).map((answer, index) => {
-                           return <option key={index} value={answer}>{answer}</option>;
-                        })}
-                       </select>
-                   </div>
-               })
-            : null
-            }
+        {    console.log(quizData)}
+            <div className='question'>
+                {quizData != null
+                    ? quizData.results[currentIndex].question
+                    : null
+                }
+            </div>
+            <div className='answers'>
+                {quizData != null
+                    ? _.shuffle([
+                    quizData.results[currentIndex].correct_answer,
+                    ...quizData.results[currentIndex].incorrect_answers
+                    ]).map((answer, index) => (
+                        <button key={index} onClick={() => handleChoiceClick(answer)}>{answer}</button>
+                    ))
+                    : null
+                }
+            </div>
         </div>
     );
 }
