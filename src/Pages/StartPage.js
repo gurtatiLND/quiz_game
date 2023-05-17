@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 function StartPage() {
 
   const [name, setName] = useState('Player')
+  console.log(name);
   return (
     <div>
       <h3>Let's get quizzical!</h3>
@@ -15,8 +16,6 @@ function StartPage() {
         placeholder='Enter your name'
         onChange={event => setName(event.target.value)}
       ></input>
-
-      {console.log(name)}
 
       <button>
         <Link to='category' state={{ name: name }}>Start</Link>

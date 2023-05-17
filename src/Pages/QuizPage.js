@@ -8,7 +8,7 @@ function QuizPage() {
 
   return (
     <div>
-        <Questions difficulty={difficulty} category={category}/>
+      <Questions difficulty={difficulty} category={category}/>
     </div>
   )
 }
