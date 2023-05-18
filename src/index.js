@@ -12,14 +12,14 @@ const Routing = () => {
   return (
     <Router>
       <Routes>
-      <Route path='/' index element={<App />} />
+      <Route path='/' index element={<App />}/>
       <Route path='/category' element={<ChooseCategory />} />
       <Route path='category/difficulty' element={<ChooseDifficulty />} />
       <Route path='category/difficulty/quiz' element={<QuizPage />} />
     </Routes>
     </Router>
   )
-}
+  }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

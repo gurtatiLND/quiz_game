@@ -1,0 +1,58 @@
+button {
+    background-color: var(--white);
+    border: 3px solid var(--orange);
+    border-radius: 10px;
+    color: var(--black);
+    padding: 15px 30px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.5s;
+}
+
+button:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    transform: scale(1.2);
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.homelogo {
+    animation: pop-in 1s;
+}
+ 
+@keyframes pop-in {
+    0% { opacity: 0; transform: scale(0.1); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+input {
+    color: var(--black);
+    font-size: 16px;
+    text-align: center;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: var(--yellow);
+    border: 3px solid var(--black);
+}
+
+h1 {
+    animation: fade-in 1s;
+}
+h2 {
+    animation: fade-in 1s;
+}
+h3 {
+    animation: fade-in 1s;
+}
+ 
+@keyframes fade-in {
+    0% { opacity: 0; transform: scale(0.1); }
+    100% { opacity: 1; transform: scale(1); }
+}
+    

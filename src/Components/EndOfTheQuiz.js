@@ -1,16 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom"
 
 //working but still in progress
 function EndOfTheQuiz({ score, handleReviewAnswersClick,}) {
 
     return (
             <div>
-                <h2>That's the end of the quiz!</h2>
-                
-                <h3>Your score is {score}</h3>
-
+                <h3>That's the end of the quiz!</h3>
+                <p/>
+                <h1>Your score is {score}</h1>
+                <p/>
                 <button >
-                    Play again
+                    <Link to='/'>Play again</Link>
                 </button>
 
                 <p>OR</p>

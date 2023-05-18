@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import _ from 'lodash';
 import EndOfTheQuiz from './EndOfTheQuiz';
 import ReviewAnswers from './ReviewAnswers';
+import "./Questions.css";
 
 
 function Questions({ difficulty, category }) {
@@ -66,15 +67,16 @@ function Questions({ difficulty, category }) {
             {isPending && <div>Loading ...</div>}
             {quizData != null && answers.length < quizData.length && <>
                 <div className='question'>
-                    <p>Question {currentIndex + 1}</p>
+                    <h3>Question {currentIndex + 1}</h3>
                     {quizData[currentIndex].question}
                 </div>
                 <div className='answers'>
+                    <p/>
                     {_.shuffle([
                         quizData[currentIndex].correct_answer,
                         ...quizData[currentIndex].incorrect_answers
                     ]).map((answer, index) => (
-                        <button key={index} onClick={() => handleChoiceClick(answer)}>{answer}</button>
+                        <p><button key={index} onClick={() => handleChoiceClick(answer)}>{answer}</button></p>
                     ))}
                 </div>
             </>}

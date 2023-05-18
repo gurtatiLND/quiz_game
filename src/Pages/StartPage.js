@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import { Link } from "react-router-dom"
-import "./StartPage.css";
+import homelogo from '../logos/full-logo.svg';
+import "./Pages.css";
 
 function StartPage() {
 
@@ -9,15 +10,16 @@ function StartPage() {
   console.log(name);
   return (
     <div>
-      <h3>Let's get quizzical!</h3>
+      <header>
+        <img src={homelogo} className="homelogo" alt="logo" width={500}/>
+      </header>
 
       <p>Who is playing today?</p>
-  
       <input 
         placeholder='Enter your name'
         onChange={event => setName(event.target.value)}
       ></input>
-
+      <p/>
       <button>
         <Link to='category' state={{ name: name }}>Start</Link>
       </button>
