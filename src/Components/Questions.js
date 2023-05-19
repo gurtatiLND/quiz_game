@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import _ from 'lodash';
 import EndOfTheQuiz from './EndOfTheQuiz';
 import ReviewAnswers from './ReviewAnswers';
-import "./Questions.css";
 import {convertToNormalString} from './convertToNormalString';
 
 
