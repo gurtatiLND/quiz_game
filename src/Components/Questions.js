@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import _ from 'lodash';
 import EndOfTheQuiz from './EndOfTheQuiz';
 import ReviewAnswers from './ReviewAnswers';
+import {convertToNormalString} from './convertToNormalString';
 
 
 function Questions({ difficulty, category }) {
@@ -35,7 +36,7 @@ function Questions({ difficulty, category }) {
         //add answers to array
         setAnswers([
             ...answers,
-            answer,
+            convertToNormalString(answer),
         ]);
   
         //implement add point if choice is correct
@@ -66,15 +67,16 @@ function Questions({ difficulty, category }) {
             {isPending && <div>Loading ...</div>}
             {quizData != null && answers.length < quizData.length && <>
                 <div className='question'>
-                    <p>Question {currentIndex + 1}</p>
-                    {quizData[currentIndex].question}
+                    <h3>Question {currentIndex + 1}</h3>
+                    {convertToNormalString(quizData[currentIndex].question)}
                 </div>
                 <div className='answers'>
+                    <p/>
                     {_.shuffle([
                         quizData[currentIndex].correct_answer,
                         ...quizData[currentIndex].incorrect_answers
                     ]).map((answer, index) => (
-                        <button key={index} onClick={() => handleChoiceClick(answer)}>{answer}</button>
+                        <p><button key={index} onClick={() => handleChoiceClick(answer)}>{convertToNormalString(answer)}</button></p>
                     ))}
                 </div>
             </>}
