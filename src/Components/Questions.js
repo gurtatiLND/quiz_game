@@ -4,6 +4,7 @@ import _ from 'lodash';
 import EndOfTheQuiz from './EndOfTheQuiz';
 import ReviewAnswers from './ReviewAnswers';
 import "./Questions.css";
+import {convertToNormalString} from './convertToNormalString';
 
 
 function Questions({ difficulty, category }) {
@@ -36,7 +37,7 @@ function Questions({ difficulty, category }) {
         //add answers to array
         setAnswers([
             ...answers,
-            answer,
+            convertToNormalString(answer),
         ]);
   
         //implement add point if choice is correct
@@ -68,7 +69,7 @@ function Questions({ difficulty, category }) {
             {quizData != null && answers.length < quizData.length && <>
                 <div className='question'>
                     <h3>Question {currentIndex + 1}</h3>
-                    {quizData[currentIndex].question}
+                    {convertToNormalString(quizData[currentIndex].question)}
                 </div>
                 <div className='answers'>
                     <p/>
@@ -76,7 +77,7 @@ function Questions({ difficulty, category }) {
                         quizData[currentIndex].correct_answer,
                         ...quizData[currentIndex].incorrect_answers
                     ]).map((answer, index) => (
-                        <p><button key={index} onClick={() => handleChoiceClick(answer)}>{answer}</button></p>
+                        <p><button key={index} onClick={() => handleChoiceClick(answer)}>{convertToNormalString(answer)}</button></p>
                     ))}
                 </div>
             </>}
