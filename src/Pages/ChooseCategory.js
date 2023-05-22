@@ -10,7 +10,7 @@ function ChooseCategory() {
   return (
     <>
         <LogoHeader/>
-        <div classname="loadfirst">
+        <div className="loadfirst">
             <h3>Hello, {name}!</h3>
             <p>What category would you like to improve on?</p>
         </div>
