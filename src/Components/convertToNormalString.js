@@ -1,7 +1,7 @@
 import _ from "lodash";
 
 const htmlsToReplace = {
-  "&quot;": `"`,
+  "&quot;": "'",
   "&amp;": "&",
   "&shy;": "-",
   "&eacute;": "é",

@@ -1,0 +1,15 @@
+.all_wrong_answers_and_questions {
+    display: inline-block;
+}
+
+.wrongAnswer{
+    background-color: var(--red);
+}
+
+.rightAnswer{
+    background-color: var(--green);
+}
+
+.otherAnswers{
+    background-color: var(--orange);
+}
