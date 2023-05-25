@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import { Link } from "react-router-dom"
 import { useNavigate} from 'react-router-dom'
 import homelogo from '../logos/full-logo.svg'
 import "./Pages.css"
@@ -29,11 +28,7 @@ function StartPage() {
         onChange={event => setName(event.target.value)}
       ></input>
       <p/>
-      <button onClick={handleStart}>Start
-        {/* <Link to='category' state={{ name: name }}>Start</Link> */}
-      </button>
-
-
+      <button onClick={handleStart}>Start</button>
     </div>
   )
 }

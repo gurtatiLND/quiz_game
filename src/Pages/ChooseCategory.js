@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import {categories} from "../Utils/categories"
@@ -8,7 +8,7 @@ function ChooseCategory() {
     const location = useLocation()
     const name  = location.state
 
-    const [category, setCategory] = useState(9)
+    const [category, setCategory] = useState(null)
 
     const navigate = useNavigate()
 
@@ -33,8 +33,14 @@ function ChooseCategory() {
             default:
                 return category
         }
-        navigate('difficulty', { state: category})
     }
+
+    useEffect(() => {
+        if (category !== null) {
+          console.log(category);
+          navigate('difficulty', { state: category });
+        }
+      }, [category, navigate]);
 
   return (
     <>
@@ -43,27 +49,25 @@ function ChooseCategory() {
             <h3>Hello, {name}!</h3>
             <p>What category would you like to improve on?</p>
         </div>
-        <div>
-            <button onClick={handleChooseCategory}>General
-                {/* <Link to='difficulty' state={{ category: categories['general'] }}>General</Link> */}
-            </button>
-            <p/>
-            <button onClick={handleChooseCategory}>Computer Science
-                {/* <Link to='difficulty' state={{ category: categories['computer-science'] }}>Computer Science</Link> */}
-            </button>
-            <p/>
-            <button onClick={handleChooseCategory}>Books
-                {/* <Link to='difficulty' state={{ category: categories['books'] }}>Books</Link> */}
-            </button>
-            <p/>
-            <button onClick={handleChooseCategory}>Films
-                {/* <Link to='difficulty' state={{ category: categories['films'] }}>Films</Link> */}
-            </button>
-            <p/>
-            <button onClick={handleChooseCategory}>Music
-                {/* <Link to='difficulty' state={{ category: categories['music'] }}>Music</Link> */}
-            </button>
-        </div>
+        <button type="button" onClick={handleChooseCategory}>
+          General
+        </button>
+        <p />
+        <button type="button" onClick={handleChooseCategory}>
+          Computer Science
+        </button>
+        <p />
+        <button type="button" onClick={handleChooseCategory}>
+          Books
+        </button>
+        <p />
+        <button type="button" onClick={handleChooseCategory}>
+          Films
+        </button>
+        <p />
+        <button type="button" onClick={handleChooseCategory}>
+          Music
+        </button>
     </>
   )
 }
