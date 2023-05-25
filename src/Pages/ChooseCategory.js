@@ -5,7 +5,7 @@ import LogoHeader from '../logos/LogoHeader'
 
 function ChooseCategory() {
     const location = useLocation()
-    const { name } = location.state
+    const name  = location.state
 
   return (
     <>
