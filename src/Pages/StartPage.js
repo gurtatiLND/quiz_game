@@ -11,7 +11,11 @@ function StartPage() {
   const [name, setName] = useState('Player')
 
   const handleStart = () => {
-    navigate('category', { state: name})
+    try {
+      navigate('category', { state: name })
+    } catch (error) {
+      console.error("Error navigating to category:", error)
+    }
   }
 
   console.log(name);
