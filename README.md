@@ -49,4 +49,12 @@ Our team has put in countless hours to ensure that this game is not only enterta
 
 [QuizApp](todo: add link to our live app)
 
+To run this app in your machine, after cloning this repo, you need to install the node modules locally. Navigate to the root folder of the project and in the terminal type:
 
+`npm install`
+
+Then you can start the app in the localhost by typing:
+
+`npm start`
+
+Have fun!
