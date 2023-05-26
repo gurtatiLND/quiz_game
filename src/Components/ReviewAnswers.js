@@ -10,27 +10,32 @@ const ReviewAnswers = ({answers, wrongAnswersAndQuestions,}) => {
             {wrongAnswersAndQuestions.map((question, index) => {
 
                 let wrongAns=answers[question.number - 1];
+
                 const rightAns=convertToNormalString(question.good_answer);
+
                 let otherAns = question.bad_answers;
                 console.log(otherAns)
+
                 let indexofwrong = otherAns.indexOf(wrongAns);
                 delete otherAns[indexofwrong];
+
                 otherAns = otherAns.filter( String);
                 console.log(otherAns)
-                const eachOtherAns = otherAns.map((ans) => <p className = "otherAnswers">{convertToNormalString(ans)}</p>)
-                wrongAns = convertToNormalString(wrongAns)
+
+                const eachOtherAns = otherAns.map((ans) => 
+                    <p className = "otherAnswers">{convertToNormalString(ans)}</p>)
+                wrongAns = convertToNormalString(wrongAns);
 
                 return <div key={index}>
-                    <h3>Question {question.number}</h3>
-                    <p>{convertToNormalString(question.question)}</p>
-                    <p className = "wrongAnswer">{wrongAns}</p>
-                    <p className = "rightAnswer">{rightAns}</p>
-                    <p >{(eachOtherAns)}</p>
-                </div>
+                        <h3>Question {question.number}</h3>
+                        <p>{convertToNormalString(question.question)}</p>
+                        <p className = "wrongAnswer">{wrongAns}</p>
+                        <p className = "rightAnswer">{rightAns}</p>
+                        <p >{(eachOtherAns)}</p>
+                    </div>
 
             })}
 
-            <p/>
             <button >
                 <Link to='/'>Play again</Link>
             </button>

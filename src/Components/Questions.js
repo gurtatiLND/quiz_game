@@ -72,6 +72,7 @@ function Questions({ difficulty, category }) {
 
     //create state for answers
     const [showReviewAnswers, setShowReviewAnswers] = useState(false);
+    
     const handleReviewAnswersClick = () => {
         setShowReviewAnswers(true);
     };
