@@ -7,74 +7,42 @@ With a user-friendly interface and a wide range of questions covering topics fro
 
 Our team has put in countless hours to ensure that this game is not only entertaining, but also educational. So, why not give it a try?
 
-# Getting Started with Create React App
+*Start Page: Here's where you type your name and start to play:*
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![StartPage](./src/assets/StartPageSS.png)
 
-## Available Scripts
+*On the next page you can choose what category you want to test your knowledge in:*
 
-In the project directory, you can run:
+![ChooseCategory](./src/assets/ChooseCategoryPageSS.png)
 
-### `npm start`
+*And then you can pick the difficulty:*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![ChooseDifficulty](./src/assets/ChooseDifficultyPageSS.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*The quiz is set. You can now start answering the questions:*
 
-### `npm test`
+![Quiz](./src/assets/QuestionSS.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*At the end you can see how many points you got on the round:*
 
-### `npm run build`
+![EndQuiz](./src/assets/EndQuizSS.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*You can start playing again. If you'd like to review the questions you got wrong you just need to click a button. The question you got wrong is marked in red, and the correct answer is marked in green:*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![ReviewQuestions](./src/assets/ReviewWrongAnswersSS.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In order to build the app, we used an external API to get the questions and answers: [OpenTriviaDB](https://opentdb.com/api_config.php)
 
-### `npm run eject`
+Then we wireframed our app in Figma:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Wireframe](./src/assets/design_fig.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+We then set up a board in Jira, where we added the tasks we needed to work on in order to complete the project:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![JiraBoard](./src/assets/JiraSS.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+*The last step is to publish it and we chose to use Netlify to host our app:*
 
-## Learn More
+[QuizApp](todo: add link to our live app)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
