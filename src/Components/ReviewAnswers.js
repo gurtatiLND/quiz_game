@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {convertToNormalString} from './convertToNormalString';
+import {convertToNormalString} from '../Utils/convertToNormalString';
 import "./ReviewAnswers.css";
 
 // refactored

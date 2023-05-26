@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import _ from 'lodash';
 import EndOfTheQuiz from './EndOfTheQuiz';
 import ReviewAnswers from './ReviewAnswers';
-import {convertToNormalString} from './convertToNormalString';
+import {convertToNormalString} from '../Utils/convertToNormalString';
 
 
 function Questions({ difficulty, category }) {
