@@ -9,6 +9,7 @@ button {
     font-size: 16px;
     font-weight: bold;
     transition: transform 0.5s;
+    cursor: pointer;
 }
 
 button:hover {
