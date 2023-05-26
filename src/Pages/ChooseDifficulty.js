@@ -10,28 +10,36 @@ function ChooseDifficulty() {
 
 
     const handleChooseDifficulty = (e) => {
-        const option = e.target.innerText
-        switch (option) {
-            case 'Easy':
-                setDifficulty('easy')
-                break
-            case 'Medium':
-                setDifficulty('medium')
-                break
-            case 'Advanced':
-                setDifficulty('hard')
-                break
-            default:
-                return difficulty
+        try {
+            const option = e.target.innerText
+            switch (option) {
+                case 'Easy':
+                    setDifficulty('easy')
+                    break
+                case 'Medium':
+                    setDifficulty('medium')
+                    break
+                case 'Advanced':
+                    setDifficulty('hard')
+                    break
+                default:
+                    return difficulty
+            }
+        } catch (error) {
+            console.error("Error selecting difficulty:", error)
         }
     }
 
     useEffect(() => {
-        if (difficulty !== null) {
-          console.log(category);
-          navigate('quiz', {state: {category: category, difficulty: difficulty}});
+        try {
+            if (difficulty !== null) {
+                console.log(category);
+                navigate('quiz', { state: { category: category, difficulty: difficulty } });
+            }
+        } catch (error) {
+            console.error("Error navigating to quiz:", error)
         }
-      }, [category, difficulty, navigate]);
+    }, [category, difficulty, navigate]);
 
   return (
     <>
