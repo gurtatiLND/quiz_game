@@ -13,34 +13,42 @@ function ChooseCategory() {
     const navigate = useNavigate()
 
     const handleChooseCategory = (e) => {
-        const option = e.target.innerText; 
-        switch(option) {
-            case 'General':
-                setCategory(categories['general'])
-                break
-            case 'Computer Science':
-                setCategory(categories['computer-science'])
-                break
-            case 'Books':
-                setCategory(categories['books'])
-                break
-            case 'Films':
-                setCategory(categories['films'])
-                break
-            case 'Music':
-                setCategory(categories['music'])
-                break
-            default:
-                return category
-        }
-    }
+      try {
+          const option = e.target.innerText;
+          switch (option) {
+              case 'General':
+                  setCategory(categories['general'])
+                  break
+              case 'Computer Science':
+                  setCategory(categories['computer-science'])
+                  break
+              case 'Books':
+                  setCategory(categories['books'])
+                  break
+              case 'Films':
+                  setCategory(categories['films'])
+                  break
+              case 'Music':
+                  setCategory(categories['music'])
+                  break
+              default:
+                  return category
+          }
+      } catch (error) {
+          console.error("Error selecting category:", error)
+      }
+  }
 
-    useEffect(() => {
-        if (category !== null) {
-          console.log(category);
-          navigate('difficulty', { state: category });
-        }
-      }, [category, navigate]);
+  useEffect(() => {
+      try {
+          if (category !== null) {
+              console.log(category);
+              navigate('difficulty', { state: category });
+          }
+      } catch (error) {
+          console.error("Error navigating to difficulty:", error)
+      }
+  }, [category, navigate]);
 
   return (
     <>
