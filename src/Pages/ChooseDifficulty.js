@@ -1,10 +1,38 @@
-import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import LogoHeader from '../logos/LogoHeader'
 
 function ChooseDifficulty() {
     const location = useLocation()
-    const {category} = location.state
+    const category = location.state
+    const navigate = useNavigate()
+    const [difficulty, setDifficulty] = useState(null)
+
+
+    const handleChooseDifficulty = (e) => {
+        const option = e.target.innerText
+        switch (option) {
+            case 'Easy':
+                setDifficulty('easy')
+                break
+            case 'Medium':
+                setDifficulty('medium')
+                break
+            case 'Advanced':
+                setDifficulty('hard')
+                break
+            default:
+                return difficulty
+        }
+    }
+
+    useEffect(() => {
+        if (difficulty !== null) {
+          console.log(category);
+          navigate('quiz', {state: {category: category, difficulty: difficulty}});
+        }
+      }, [category, difficulty, navigate]);
+
   return (
     <>
     <LogoHeader/>
@@ -12,18 +40,11 @@ function ChooseDifficulty() {
 
         <h3>Choose Difficulty</h3>
         <div>
-            <button>
-                <Link to='quiz' state={{ difficulty: 'easy', category: category }}>Easy</Link>
-            </button>
+            <button onClick={handleChooseDifficulty}>Easy</button>
             <p/>
-            <button>
-                <Link to='quiz' state={{ difficulty: 'medium', category: category }}>Medium</Link>
-            </button>
+            <button onClick={handleChooseDifficulty}>Medium</button>
             <p/>
-            <button>
-                <Link to='quiz' state={{ difficulty: 'hard', category: category }}>Advanced</Link>
-            </button>             
-               
+            <button onClick={handleChooseDifficulty}>Advanced</button>             
         </div>
     </div>
     </>

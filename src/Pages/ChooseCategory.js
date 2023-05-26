@@ -1,11 +1,46 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import {categories} from "../Utils/categories"
 import LogoHeader from '../logos/LogoHeader'
 
 function ChooseCategory() {
     const location = useLocation()
-    const { name } = location.state
+    const name  = location.state
+
+    const [category, setCategory] = useState(null)
+
+    const navigate = useNavigate()
+
+    const handleChooseCategory = (e) => {
+        const option = e.target.innerText; 
+        switch(option) {
+            case 'General':
+                setCategory(categories['general'])
+                break
+            case 'Computer Science':
+                setCategory(categories['computer-science'])
+                break
+            case 'Books':
+                setCategory(categories['books'])
+                break
+            case 'Films':
+                setCategory(categories['films'])
+                break
+            case 'Music':
+                setCategory(categories['music'])
+                break
+            default:
+                return category
+        }
+    }
+
+    useEffect(() => {
+        if (category !== null) {
+          console.log(category);
+          navigate('difficulty', { state: category });
+        }
+      }, [category, navigate]);
 
   return (
     <>
@@ -14,27 +49,25 @@ function ChooseCategory() {
             <h3>Hello, {name}!</h3>
             <p>What category would you like to improve on?</p>
         </div>
-        <div>
-            <button>
-                <Link to='difficulty' state={{ category: categories['general'] }}>General</Link>
-            </button>
-            <p/>
-            <button>
-                <Link to='difficulty' state={{ category: categories['computer-science'] }}>Computer Science</Link>
-            </button>
-            <p/>
-            <button>
-                <Link to='difficulty' state={{ category: categories['books'] }}>Books</Link>
-            </button>
-            <p/>
-            <button>
-                <Link to='difficulty' state={{ category: categories['films'] }}>Films</Link>
-            </button>
-            <p/>
-            <button>
-                <Link to='difficulty' state={{ category: categories['music'] }}>Music</Link>
-            </button>
-        </div>
+        <button type="button" onClick={handleChooseCategory}>
+          General
+        </button>
+        <p />
+        <button type="button" onClick={handleChooseCategory}>
+          Computer Science
+        </button>
+        <p />
+        <button type="button" onClick={handleChooseCategory}>
+          Books
+        </button>
+        <p />
+        <button type="button" onClick={handleChooseCategory}>
+          Films
+        </button>
+        <p />
+        <button type="button" onClick={handleChooseCategory}>
+          Music
+        </button>
     </>
   )
 }
