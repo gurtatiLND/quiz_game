@@ -7,11 +7,11 @@ With a user-friendly interface and a wide range of questions covering topics fro
 
 Our team has put in countless hours to ensure that this game is not only entertaining, but also educational. So, why not give it a try?
 
-*Start Page: Here's where you type your name and start to play:*
+*Start Page: Here's where you type your name and start playing:*
 
 ![StartPage](./src/assets/StartPageSS.png)
 
-*On the next page you can choose what category you want to test your knowledge in:*
+*On the next page, you can pick the category you want to test your knowledge in.*
 
 ![ChooseCategory](./src/assets/ChooseCategoryPageSS.png)
 
@@ -23,11 +23,14 @@ Our team has put in countless hours to ensure that this game is not only enterta
 
 ![Quiz](./src/assets/QuestionSS.png)
 
-*At the end you can see how many points you got on the round:*
+*At the end, you'll be able to view the total number of points you scored for the round.*
 
 ![EndQuiz](./src/assets/EndQuizSS.png)
 
-*You can start playing again. If you'd like to review the questions you got wrong you just need to click a button. The question you got wrong is marked in red, and the correct answer is marked in green:*
+*You have the option to resume playing.*
+
+*Simply click a button to access a review of the questions you answered incorrectly.
+The incorrect answers are highlighted in red, while the correct answers are highlighted in green.*
 
 ![ReviewQuestions](./src/assets/ReviewWrongAnswersSS.png)
 
