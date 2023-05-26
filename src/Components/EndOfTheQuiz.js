@@ -8,17 +8,29 @@ function EndOfTheQuiz({ score, handleReviewAnswersClick,}) {
             <div>
                 <h3>That's the end of the quiz!</h3>
                 <p/>
-                <h1>Your score is {score}</h1>
+                    <h1>Your score is {score}</h1>
                 <p/>
-                <button >
-                    <Link to='/'>Play again</Link>
-                </button>
-
-                <p>OR</p>
-
-                <button onClick={handleReviewAnswersClick}>
-                    Review wrong answers
-                </button>
+                <div className='review_wrong_answers'>
+                    {score === 10 && <>
+                        <h1>Congratulations!</h1>
+                        <button >            
+                            <Link to='/'>Play again</Link>
+                        </button>
+                    </>
+                    }
+                    {score < 10 && <>
+                        <button >
+                            <Link to='/'>Play again</Link>
+                        </button>
+                        <p>
+                            OR
+                        </p>
+                        <button onClick={handleReviewAnswersClick}>
+                            Review wrong answers
+                        </button>
+                    </>
+                    }
+                </div>
             </div>
         );
 }
