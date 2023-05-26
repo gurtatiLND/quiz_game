@@ -27,20 +27,21 @@ Our team has put in countless hours to ensure that this game is not only enterta
 
 ![EndQuiz](./src/assets/EndQuizSS.png)
 
-*You have the option to resume playing.*
+*You have the option to play again.*
 
-*Simply click a button to access a review of the questions you answered incorrectly.
-The incorrect answers are highlighted in red, while the correct answers are highlighted in green.*
+*Simply click a button to access a review of the questions you answered incorrectly.*
+
+*The incorrect answers are highlighted in red, while the correct answers are highlighted in green.*
 
 ![ReviewQuestions](./src/assets/ReviewWrongAnswersSS.png)
 
-In order to build the app, we used an external API to get the questions and answers: [OpenTriviaDB](https://opentdb.com/api_config.php)
+*We used an external API to get the questions and answers: [OpenTriviaDB](https://opentdb.com/api_config.php)*
 
-Then we wireframed our app in Figma:
+*Then we wireframed our app in Figma:*
 
 ![Wireframe](./src/assets/design_fig.png)
 
-We then set up a board in Jira, where we added the tasks we needed to work on in order to complete the project:
+*We then set up a board in Jira, where we added the tasks we needed to work on in order to complete the project:*
 
 ![JiraBoard](./src/assets/JiraSS.png)
 
