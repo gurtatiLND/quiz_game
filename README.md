@@ -45,9 +45,9 @@ Our team has put in countless hours to ensure that this game is not only enterta
 
 ![JiraBoard](./src/assets/JiraSS.png)
 
-*The last step is to publish it and we chose to use Netlify to host our app:*
+> *The last step was publish our app with Netlify:*
 
-[QuizApp](todo: add link to our live app)
+>[QuizApp is live!](https://64726667e519213b1f996ae4--gentle-lolly-c774bf.netlify.app/)
 
 To run this app in your machine, after cloning this repo, you need to install the node modules locally. Navigate to the root folder of the project and in the terminal type:
 
