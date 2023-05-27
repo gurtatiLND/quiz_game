@@ -1,9 +1,9 @@
 import React from 'react'
 import { render, screen, fireEvent, cleanup } from '@testing-library/react'
-import StartPage from './Pages/StartPage'
-import ChooseCategory from './Pages/ChooseCategory'
-import ChooseDifficulty from './Pages/ChooseDifficulty'
-import { categories } from './Utils/categories'
+import StartPage from '../Pages/StartPage';
+import ChooseCategory from '../Pages/ChooseCategory'
+import ChooseDifficulty from '../Pages/ChooseDifficulty'
+import { categories } from '../Utils/categories'
 import { MemoryRouter, BrowserRouter } from 'react-router-dom'
 
 const mockedUsedNavigate = jest.fn();
