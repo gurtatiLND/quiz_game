@@ -4,7 +4,7 @@ import _ from 'lodash';
 import EndOfTheQuiz from './EndOfTheQuiz';
 import ReviewAnswers from './ReviewAnswers';
 import {convertToNormalString} from '../Utils/convertToNormalString';
-
+import fetchQuestions from '../api/fetchQuestions';
 
 function Questions({ difficulty, category }) {
     const [quizData, setQuizData] = useState(null);
@@ -20,8 +20,10 @@ function Questions({ difficulty, category }) {
         const handleFetchData = async () => {
             //before the data will be fetched we set the state of 'ispending' on true
             setIsPending(true);
-            const response = await fetch(TRIVIA_API_URL);
-            const data = await response.json();
+            const data = await fetchQuestions({
+                category,
+                difficulty,
+            });
             console.log(data);
             setQuizData(data.results); //in this place I assign once  data.results to the quizData, so don't need to write data.results all the time
 

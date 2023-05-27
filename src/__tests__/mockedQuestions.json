@@ -1,0 +1,119 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "Which famous book is sub-titled &#039;The Modern Prometheus&#039;?",
+            "correct_answer": "Frankenstein",
+            "incorrect_answers": [
+                "Dracula",
+                "The Strange Case of Dr. Jekyll and Mr. Hyde ",
+                "The Legend of Sleepy Hollow"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "&quot;Green Eggs And Ham&quot; is a book by which author?",
+            "correct_answer": "Dr. Seuss",
+            "incorrect_answers": [
+                "Beatrix Potter",
+                "Roald Dahl",
+                "A.A. Milne"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "Which famous spy novelist wrote the childrens&#039; story &quot;Chitty-Chitty-Bang-Bang&quot;?",
+            "correct_answer": "Ian Fleming",
+            "incorrect_answers": [
+                "Joseph Conrad",
+                "John Buchan",
+                "Graham Greene"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "What&#039;s the second book in George R. R. Martin&#039;s &#039;A Song of Ice and Fire&#039; series?",
+            "correct_answer": "A Clash of Kings",
+            "incorrect_answers": [
+                "A Dance with Dragons",
+                "A Storm of Swords",
+                "A Feast for Crows"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "boolean",
+            "difficulty": "easy",
+            "question": "&quot;Green Eggs and Ham&quot; consists of only 50 different words.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "What was the first ever entry written for the SCP Foundation collaborative writing project?",
+            "correct_answer": "SCP-173",
+            "incorrect_answers": [
+                "SCP-001",
+                "SCP-999",
+                "SCP-1459"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "In the novel 1984, written by George Orwell, what is the name of the totalitarian regime that controls Oceania?",
+            "correct_answer": "INGSOC",
+            "incorrect_answers": [
+                "Neo-Bolshevism",
+                "Obliteration of the Self",
+                "Earth Alliance"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "boolean",
+            "difficulty": "easy",
+            "question": "The Harry Potter series of books, combined, are over 1,000,000 words in length.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "What was Sir Handel&#039;s original name in &quot;The Railway Series&quot; and it&#039;s animated counterpart &quot;Thomas and Friends?&quot;",
+            "correct_answer": "Falcon",
+            "incorrect_answers": [
+                "Eagle",
+                "Kyte",
+                "Swallow"
+            ]
+        },
+        {
+            "category": "Entertainment: Books",
+            "type": "boolean",
+            "difficulty": "easy",
+            "question": "Shub-Niggurath is a creature that was created by \tJ. R. R. Tolkien in his novel &quot;The Lord of The Rings&quot;.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+                "True"
+            ]
+        }
+    ]
+}
