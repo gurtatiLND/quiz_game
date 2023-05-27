@@ -43,7 +43,7 @@ test('start button takes user to the ChooseCategory page', () => {
   expect(mockedUsedNavigate).toHaveBeenCalledWith("category", {"state": "Player"});
 });
 
-/* test('Choosing a category (General) takes user to the ChooseDifficulty page', () => {
+test('Choosing a category (General) takes user to the ChooseDifficulty page', () => {
   const mockedHandleChooseCategory = jest.fn()
   render(
     <MemoryRouter>
@@ -55,4 +55,4 @@ test('start button takes user to the ChooseCategory page', () => {
   //expect(categories["general"]).toBe(9);
   expect(mockedHandleChooseCategory).toHaveBeenCalled();
   expect(mockedUsedNavigate).toHaveBeenCalledWith('difficulty', { state: generalCategory });
-}); */
+});
