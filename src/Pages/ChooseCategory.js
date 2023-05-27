@@ -57,7 +57,7 @@ function ChooseCategory() {
             <h3>Hello, {name}!</h3>
             <p>What category would you like to improve on?</p>
         </div>
-        <button type="button" onClick={handleChooseCategory()}>
+        <button type="button" onClick={handleChooseCategory}>
           General
         </button>
         <p />
