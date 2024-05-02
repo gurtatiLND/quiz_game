@@ -1,3 +1,17 @@
+/* base styles */
+html, body {
+  height: 100%;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  margin: 0;
+  font-size: 1.4em;
+  background: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+  color: #333;
+}
+
+/*why do i need this?*/
 :root {
   --white: #F9F7F5;
   --black: #1D2022;
@@ -7,13 +21,3 @@
   --green: #98D8AA;
 }
 
-
-body {
-  text-align: center;
-  line-height: 1.5;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color:#1D2022;
-  background-color:#F3E99F;
-}

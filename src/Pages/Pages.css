@@ -1,3 +1,8 @@
+/*start_page {
+    max-width: 860px;
+    margin: 10%;
+}*/
+
 button {
     background-color: var(--white);
     border: 3px solid var(--orange);
@@ -25,7 +30,14 @@ a {
 
 .homelogo {
     animation: pop-in 1s;
+    margin: 5%
 }
+
+.start_game {
+    animation: pop-in 1s;
+    margin: 5%
+}
+
  
 @keyframes pop-in {
     0% { opacity: 0; transform: scale(0.1); }
