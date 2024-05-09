@@ -7,9 +7,9 @@
 }
 
 .rightAnswer{
-    background-color: var(--green);
+    background-color: #98d8aa;
 }
 
 .otherAnswers{
-    background-color: var(--orange);
+    background-color: #fef9d7;
 }
