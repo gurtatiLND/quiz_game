@@ -4,10 +4,10 @@
 }*/
 
 button {
-    background-color: var(--white);
-    border: 3px solid var(--orange);
+    background-color: #d299c2;
+    border: 2px solid #1B2F5C;
     border-radius: 10px;
-    color: var(--black);
+    color: #1B2F5C;
     padding: 15px 30px;
     text-align: center;
     display: inline-block;
@@ -18,8 +18,8 @@ button {
 }
 
 button:hover {
-    background-color: var(--orange);
-    color: var(--white);
+    background-color: #fef9d7;
+    color: #1B2F5C;
     transform: scale(1.2);
 }
 
@@ -45,14 +45,22 @@ a {
 }
 
 input {
-    color: var(--black);
+    color: #1B2F5C;
     font-size: 16px;
     text-align: center;
     padding: 15px 30px;
     border-radius: 10px;
-    background-color: var(--yellow);
-    border: 3px solid var(--black);
+    background-color: var(--white);
+    border: 2px solid #1B2F5C;
 }
+
+.input-wrapper,
+.button-wrapper {
+    display: inline-block;
+    vertical-align: top; /* Align elements to the top */
+    margin-right: 10px; /* Adjust the margin between the elements */
+}
+
 
 h1 {
     animation: fade-in 1s;

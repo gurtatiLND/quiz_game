@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import quizzicallogo from './quizzical-logo.svg'
+import quizzicallogo from './logo_for_pages.png'
 import "./LogoHeader.css"
 
 const LogoHeader = () => {

@@ -25,11 +25,15 @@ export default function StartPage() {
     
       <div className='start_game'>
         <p>Who is playing now?</p>
-        <input 
-          placeholder='Enter your name'
-          onChange={(e) => setName(e.target.value)}>
-        </input>
-        <button onClick={handleStart}>Start</button>
+        <div className="input-wrapper">
+          <input 
+            placeholder='Enter your name'
+            onChange={(e) => setName(e.target.value)}>
+          </input>
+        </div>
+        <div className="button-wrapper">
+          <button onClick={handleStart}>Start</button>
+        </div>
       </div>
     </div>
   )

@@ -2,13 +2,19 @@
 html, body {
   height: 100%;
 }
+
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   margin: 0;
   font-size: 1.4em;
   background: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
-  color: #333;
+  color: #1B2F5C;
 }
 
 /*why do i need this?*/

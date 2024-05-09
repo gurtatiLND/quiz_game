@@ -1,13 +1,13 @@
 .logobutton {
     text-align: left;
-    background-color: var(--yellow);
+    background-color: #d299c2;
     border: none;
     display: flex;
     justify-content: flex-end;
 }
 
 .logobutton:hover {
-    background-color: var(--yellow);
+    background-color: #d299c2;
     transform: scale(1.1);
     border: none;
 }
