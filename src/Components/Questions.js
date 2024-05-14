@@ -16,7 +16,7 @@ function Questions({ difficulty, category }) {
 
     //put everything which is related to the fetch inside this function
     useEffect(() => {
-        const TRIVIA_API_URL = `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}`;
+        //const TRIVIA_API_URL = `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}`;
         const handleFetchData = async () => {
             //before the data will be fetched we set the state of 'ispending' on true
             setIsPending(true);

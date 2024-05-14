@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import {categories} from "../Utils/categories"
 import LogoHeader from '../logos/LogoHeader'
